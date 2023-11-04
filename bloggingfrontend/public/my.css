@@ -1,0 +1,114 @@
+@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css");
+
+.left:focus{
+    width: 50px;;
+}
+
+.search-click {
+    border: 1px solid #ccc;
+    outline: none;
+    background-size: 22px;
+    background-position: 13px;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 25px;
+    transition: all 0.5s;
+  }
+.search-click:focus {
+    width: 300px;
+    padding-left: 50px;
+}
+.search-click {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+}
+
+ 
+.search-click input {
+    background: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    left: 0%;
+    padding: 10px;
+}
+
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav{
+    background-color: steelblue;
+}
+
+
+.center{
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 10px;
+    max-width: 500px;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px lightblue;
+    border-radius: 40px;
+}
+
+input[type=text]
+{
+    text-align: center;
+    max-width: 250px;
+    border-radius: 64px; 
+border: 2px solid #800000;: 250px;
+}
+
+input[type=password]
+{
+    text-align: center;
+    max-width: 250px;
+    border-radius: 64px; 
+border: 2px solid #800000;
+}
+
+.centerlogin{
+    margin-left: 38%;
+    margin-right: 40%;
+    margin-top: 19%;
+    max-width: 500px;
+    
+    align-items: center;align-items: center;
+    box-shadow: 0px 0px 5px 0px ;
+
+    border-radius: 25px;
+
+    position: relative;
+    
+}
+
+.centerlo{
+    margin-left: 18%;
+    padding: 12px 10px 10px 10px;
+    position: relative;
+}
+
+.buttoncenter{
+    margin-left: 43%;
+}
+
+input[type=textarea]
+{
+    border-radius: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 1000px;
+    align-items: center;
+}
+
+input[type=submit]
+{
+    margin-left: 40%;
+    margin-right: 20%;
+}
