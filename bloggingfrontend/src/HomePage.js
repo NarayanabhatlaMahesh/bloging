@@ -29,7 +29,7 @@ function HomePage()
                             <p>
                                 title is :{info.title}
                             </p>
-                            <p> ata is {info.text_data}</p>
+                            <p> data is {info.text_data}</p>
                             <br />
                             <br />
                         </div>
