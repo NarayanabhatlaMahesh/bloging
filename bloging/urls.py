@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from blog.views import Blog as views
+from blog import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -12,5 +12,6 @@ urlpatterns = [
     path("BlogPost/",views.BlogPost,name="BlogPost"),
     path("Blogdelete/",views.Blogdelete,name="Blogdelete"),
     path("getLogin/",views.getlogin,name="getlogin"),
-    path("putlogin/",views.setlogin,name="setlogin")
+    path("putlogin/",views.setlogin,name="setlogin"),
+    path("generating/",views.generatesomeresp,name="generatesomeresp")
 ]

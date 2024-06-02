@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react';
 
 function App()
 {
+  var localval = localStorage.getItem('lavangum');
   const [a,Seta]=useState([])
   useEffect(()=>{axios.get("http://127.0.0.1:8000/BlogGet/").then(
     Response=>{console.log(Response.data);
@@ -21,7 +22,7 @@ function App()
     {
      a.map((Info)=>{ 
       return(
-        <div class="center">
+        <div class="center">{localval}
         <p><b>Blog title is = {Info.title}</b></p>
         <p> {Info.text_data}</p>
         <hr/>

@@ -16,8 +16,8 @@ function Login()
         event.preventDefault();
         axios.get("http://127.0.0.1:8000/UsernameGet/",{
             headers:{
-                Accept : "application/json"
-            }
+                Accept : "application/json",
+            },
         }).then(
             Response=>{setb(Response.data);
             }
@@ -30,10 +30,10 @@ function Login()
     }
 
    
-    useEffect( ()=>{
-        b.forEach(validate);
-    },[b,validate]
-    );
+    // useEffect( ()=>{
+    //     b.forEach(validate);
+    // },[b,validate]
+    // );
     function validate(index, values)
     {
         setvalid(false)

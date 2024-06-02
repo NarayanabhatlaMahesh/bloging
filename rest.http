@@ -7,9 +7,15 @@ Content-Type:application/json
     "email":"emaile@gmail.com"
 }
 
+###
+
 GET http://127.0.0.1:8000/UsernameGet/
 
+###
+
 DELETE   http://127.0.0.1:8000/Usernamedelete/username0
+
+###
 
 POST http://127.0.0.1:8000/BlogPost/
 Content-Type: application/json
@@ -18,3 +24,6 @@ Content-Type: application/json
     "title":"nothing",
     "text_data":"everythingo"
 }
+
+###
+GET http://127.0.0.1:8000/BlogGet/

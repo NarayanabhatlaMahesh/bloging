@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-q%#!&5aww6^v*-kvl*b)4tmqgfk*_5t(9ao^*^23&urjrgfokn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://localhost:3000','127.0.0.1']
 
 
 # Application definition
@@ -40,9 +40,14 @@ INSTALLED_APPS = [
     'corsheaders',
     'blog',
     'rest_framework',
+    'rest_framework.authtoken'
     
     
 ]
+
+SESSION_SAVE_EVERY_REQUEST =True
+
+SESSION_COOKIE_DOMAIN='http://localhost:3000'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -55,9 +60,16 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-REST_FRAMEWORK={'EFAULT_PERMISSION_CLASSES':['rest_framework.permission.AllowAny']}
+REST_FRAMEWORK={'DEFAULT_PERMISSION_CLASSES':['rest_framework.permissions.AllowAny'],
+                'DEFAULT_AUTHENTICATION_CLASSES':[
+                    'rest_framework.authentication.BasicAuthentication',
+                    'rest_framework.authentication.SessionAuthentication'
+                ]
+        }
 
 CROS_ORIGIN_ALLOW_ALL= True
+
+AUTH_USER_MODEL='blog.Users'
 
 ROOT_URLCONF = "bloging.urls"
 
