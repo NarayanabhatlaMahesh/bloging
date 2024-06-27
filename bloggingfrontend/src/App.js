@@ -1,18 +1,25 @@
 import axios from 'axios';
-import NavReturn from './Navbar/Navbar';
+import NavReturn from './views/Navbar/Navbar';
 import {useEffect, useState} from 'react';
 
 function App()
 {
-  var localval = localStorage.getItem('lavangum');
   const [a,Seta]=useState([])
-  useEffect(()=>{axios.get("http://127.0.0.1:8000/BlogGet/").then(
-    Response=>{console.log(Response.data);
+  useEffect(()=>{axios.get("http://127.0.0.1:8000/blog/BlogGet/",{
+    headers:{
+      Accept : "application/json",
+      "Authorization": 'Token '+localStorage.getItem('Auth_key')
+  }
+  }).then(
+    Response=>{
+      console.log('resp data is ----',Response.data);
       Seta(Response.data);
     }
   ).catch((error)=>{
     console.log(error);
   })},[]);
+
+  
 
 
   return (
@@ -22,7 +29,7 @@ function App()
     {
      a.map((Info)=>{ 
       return(
-        <div class="center">{localval}
+        <div class="center">
         <p><b>Blog title is = {Info.title}</b></p>
         <p> {Info.text_data}</p>
         <hr/>

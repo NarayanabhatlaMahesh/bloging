@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Login from "./Navbar/login";
-import AddComponent from "./some";
-import Logout from "./Navbar/logout";
 import '@material/web/button/filled-button.js';
 import '@material/web/button/outlined-button.js';
 import '@material/web/checkbox/checkbox.js';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import Login from "./views/Auth/login";
+import AddComponent from "./views/Blog/EditBlog";
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +19,6 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/WriteBlog" element={ <AddComponent /> } />
       <Route path="/Login" element={ <Login /> } />
-      <Route path="/logout" element={ <Logout /> } />
     </Routes>
   </BrowserRouter>
 );
